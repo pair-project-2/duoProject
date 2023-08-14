@@ -1,0 +1,116 @@
+[
+    {
+        "name": "",
+        "price": "25$",
+        "description": "",
+        "category":"dress",
+        "imageUrl": "1.jpg"
+    },
+    {
+        "name": "",
+        "price": "60$" ,                                                                                                                      
+        "description":"",
+        "category": "dress",
+        "imageUrl": "2.jpg"
+    },
+    {
+        "name": "",
+        "price": "40$",
+        "description": "",
+        "category":"dress",
+        "imageUrl": "3.jpg"
+    },
+    {
+        "name": "",
+        "price": "50$",
+        "description": "",
+        "category":"jeans",
+        "imageUrl": "4.jpg"
+    },
+    {
+        "name": "",
+        "price": "70$",
+        "description": "",
+        "category":"jeans",
+        "imageUrl": "5.jpg"
+    },
+    {
+        "name": "",
+        "price": "70$",
+        "description": "",
+        "category":"jeans",
+        "imageUrl": "6.jpg"
+    },
+    {
+        "name": "",
+        "price": "70$",
+        "description": "",
+        "category":"jacket",
+        "imageUrl": "7.jpg"
+    },
+    {
+        "name": "",
+        "price": "70$",
+        "description": "",
+        "category":"jacket",
+        "imageUrl": "8.jpg"
+    },
+    {
+        "name": "",
+        "price": "70$",
+        "description": "",
+        "category":"jacket",
+        "imageUrl": "9.jpg"
+    },
+    {
+        "name": "",
+        "price": "70$",
+        "description": "",
+        "category":"pyjamas",
+        "imageUrl": "10.jpg"
+    },
+    {
+        "name": "",
+        "price": "70$",
+        "description": "",
+        "category":"pyjamas",
+        "imageUrl": "11.jpg"
+    },
+    {
+        "name": "",
+        "price": "70$",
+        "description": "",
+        "category":"pyjamas",
+        "imageUrl": "12.jpg"
+    },
+    {
+        "name": "",
+        "price": "70$",
+        "description": "",
+        "category":"shoes",
+        "imageUrl": "13.jpg"
+    },
+    {
+        "name": "",
+        "price": "70$",
+        "description": "",
+        "category":"shoes",
+        "imageUrl": "14.jpg"
+    },
+    {
+        "name": "",
+        "price": "70$",
+        "description": "",
+        "category":"shoes",
+        "imageUrl": "15.jpg"
+    }
+
+    
+
+
+
+    
+
+
+
+]
