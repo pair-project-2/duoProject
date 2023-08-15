@@ -1,7 +1,7 @@
 const { db } = require("../mongoDb/main");
 const {Product} = require("../mongoDb/Model.js");
 
-const sampleData = require("../../react-client/data.json");
+const sampleData = require("../../FrontEnd/src/components/data/data.json");
 
 const insertSampleProducts = function () {
   Product.create(sampleData)
