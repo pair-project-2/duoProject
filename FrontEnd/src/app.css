@@ -1,5 +1,5 @@
 .nav {
-    background-color: #780303;
+    background-color: #9b3737;
     margin: 0px;
     padding: 10px;
     display: flex;
@@ -47,28 +47,53 @@
       text-align: center;
       font-size: 18px;
       margin-right: 1px;
-      border-top-right-radius: 0px;
-      border-bottom-right-radius: 0px;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
   }
   .searchForm{
     margin-right: 20%;
   }
-  .searchButton{
-    height: 42px;
-    border-top-right-radius: 11px;
-    border-bottom-right-radius: 11px;
-    width:47px;
-    border: transparent;
-    background-color: black;
-    font-size: 15px;
-  }
-  .searchButton:hover{
-    height: 42px;
-    border-top-right-radius: 11px;
-    border-bottom-right-radius: 11px;
-    width:47px;
-    cursor: pointer;
-  }
+ /* Style for the search input */
+.searchInput {
+  height: 30px;
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+  width: 200px; /* Adjust the width as needed */
+  border: transparent;
+  padding: 5px 10px;
+  font-size: 15px;
+}
+
+/* Style for the search button */
+.searchButton {
+  height: 30px;
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+  width: 32px;
+  border: transparent;
+  background-color: black;
+  font-size: 15px;
+  color: white; /* Add text color for better visibility */
+  cursor: pointer;
+}
+
+/* Hover effect for the search button */
+.searchButton:hover {
+  height: 40px;
+  width: 44px;
+}
+
+/* Container to hold the search input and button */
+.searchContainer {
+  display: flex;
+  align-items: center;
+}
+
+/* Margin to separate the button from the input */
+.searchButton {
+  margin-left: -100px; /* Adjust as needed */
+}
+
   .menu{
     position: absolute;
     display: flex;
@@ -134,7 +159,7 @@
   }
   
   .product-card-buttons button {
-    background-color: #6e0378;
+    background-color: #8bbbe0;
     color: #fff;
     border: none;
     border-radius: 5px;

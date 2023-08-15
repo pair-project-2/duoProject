@@ -15,6 +15,10 @@ const App=()=>{
   const [data,setData] = useState([]);
   const [one,setOne]=useState([]);
   const [trigger,setTrigger] = useState(false)
+  const [tshirts, setTishirt] = useState([]);
+  const [sneakers, setSneakers] = useState([]);
+  const [shirts, setShirts] = useState([]);
+  const [accessories,setAccessories]= useState([])
 
 const switchView=(view)=>{
   setView(view)
@@ -27,6 +31,7 @@ const fetch=()=>{
   .then(res=>setData(res.data))
   .catch(err=>console.log(err))
 }
+
 const delet=(id)=>{
 axios.delete(`http://localhost:4000/api/products/${id}`)
 .then(res=>{setTrigger(!trigger)})
@@ -37,36 +42,53 @@ const update=(id)=>{
   .then(res=>{setTrigger(!trigger)})
   .catch(err=>console.log(err))
   };
+  const stalSearch = (terms) => {
+    if (!terms) {
+      setTrigger(!trigger);
+    } else {
+      setData(
+        data.filter((e) =>
+          e.name.toLowerCase().includes(terms.toLowerCase())
+        )
+      );
+    }
+  };
 useEffect(()=>{
   fetch()
+
+  setSneakers(data.filter((e)=>e.category === "sneakers"))
+  setShirts(data.filter((e)=>e.category === "shirt"))
+  setTishirt(data.filter((e)=>e.category === "Tshirt"))
+  setAccessories(data.filter((e)=>e.category === "accessories"))
+
 },[trigger])
 return(
   <div className="App">
         <div className="nav">
           <span className="logo" onClick={()=>{switchView ("productList")
            setTrigger(!trigger)}}>Outlet</span>
-          { view ==="productList" &&<Search />}
+          { view ==="productList" &&<Search stal={stalSearch} />}
         { view ==="productList" && <span className="items" onClick={toggleMenu}>
-          &#9660;
+          
             CATEGORIES
-            &#9660;
+            
           </span>}
           <span className="items" onClick={()=>switchView ("cart")}>
-            🛒
+          
             CART
           </span>
           <span className="items" onClick={()=>switchView ("contact")}>
-          Contact Us
+          CONTACT
           </span>
           <span className="items" onClick={()=>switchView ("add")}>
-          Add
+          UPDATE
           </span>
         </div>
        {menuView && <div className="menu">
-            <span className='menu-item' >Sneakers</span>
-            <span className='menu-item' >T-Shirts</span>
-            <span className='menu-item' >Shirts</span>
-            <span className='menu-item' >Accessories</span>
+            <span className='menu-item' onClick={()=>setData(sneakers)} >Sneakers</span>
+            <span className='menu-item' onClick={()=>setData(tshirts)} >T-Shirts</span>
+            <span className='menu-item'onClick={()=>setData(shirts)} >Shirts</span>
+            <span className='menu-item'onClick={()=>setData(accessories)} >Accessories</span>
           </div>}
           {view ==="productList" && <Productlist data={data} setView={setView} setOne={setOne} delet={delet} update={update} />}  
           {view ==="productdetails" && <Productdetails  ones={one}/>}
