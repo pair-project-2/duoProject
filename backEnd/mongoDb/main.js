@@ -8,17 +8,28 @@ const getAllProducts = () => {
  return Product.find()
 
 };
-const deleteOne = (id) => {
+const deleteOneProduct = (id) => {
     console.log(id);
     return Product.findByIdAndDelete({ _id:id });
   };
+  const getOneProduct = (id) => {
+    return Product.findById(id);
+  };
 
-  const update = (id, data) => {
+  const updateOneProduct = (id, data) => {
     return Product.findOneAndUpdate({_id:id}, data, { new: true });
+  };
+  const createOneProduct = (data) => {
+    return Product.create(data);
   };
 
 module.exports = {
   db,
   getAllProducts,
+  deleteOneProduct,
+  updateOneProduct,
+  getOneProduct,
+  createOneProduct,
+
   
 };
