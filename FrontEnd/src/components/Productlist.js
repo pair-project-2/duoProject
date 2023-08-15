@@ -1,7 +1,7 @@
 import React from "react";
 import Productdetails from "./Productdetails";
 
-const ProductsList = ({data,setOne,setView,delet,update}) => {
+const ProductsList = ({data,setOne,setView,delet,upd}) => {
     return (
         <div>
         <div className='products-list'>
@@ -17,7 +17,7 @@ const ProductsList = ({data,setOne,setView,delet,update}) => {
                 <p className='card-item-price'>Price: ${e.price}</p>
                 <p className='card-item-cat'>Categories: {e.category}</p>
                 <div className="product-card-buttons">
-                    <button >Update Product</button>
+                    <button onClick={()=>{upd(e._id)}}>Update Product</button>
                     <button onClick={()=>{delet(e._id)}}>Delete Product</button>
                     <button >Add to Cart</button>
                 </div>

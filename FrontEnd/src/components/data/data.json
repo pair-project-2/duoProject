@@ -1,30 +1,75 @@
-[
-    {
-      "name": "Sneaker 1",
-      "description": "Comfortable and stylish sneaker",
-      "imageUrl": "https://example.com/sneaker1.jpg",
-      "price": 99.99,
-      "category": "sneakers"
-    },
-    {
-      "name": "T-Shirt 1",
-      "description": "Casual and cool T-shirt",
-      "imageUrl": "https://example.com/tshirt1.jpg",
-      "price": 19.99,
-      "category": "Tshirt"
-    },
-    {
-      "name": "Shirt 1",
-      "description": "Formal shirt for special occasions",
-      "imageUrl": "https://example.com/shirt1.jpg",
-      "price": 49.99,
-      "category": "shirt"
-    },
-    {
-      "name": "Accessory 1",
-      "description": "Stylish accessory for completing your look",
-      "imageUrl": "https://example.com/accessory1.jpg",
-      "price": 29.99,
-      "category": "accessories"
-    }
-  ]
+[{
+ 
+  "name": "T-Shirt",
+  "description": "Casual and cool T_shirt",
+  "imageUrl": "https://www.ikea.com/jp/en/images/products/eftertraeda-t-shirt-white__0932918_pe791671_s5.jpg",
+  "price": 19.99,
+  "category": "Tshirt"
+ 
+},
+
+{
+
+  "name": "Accessories",
+  "description": "Fashion accessories to enhance your style.",
+  "imageUrl": "https://cdn.morellato.com/i/default/77631/montre-morellato-m-01-r0153167501_v1n201@2x.jpg",
+  "price": 79.99,
+  "category": "accessories"
+ 
+},
+{
+
+  "name": "Polo",
+  "description": "Formal shirt for special occasions",
+  "imageUrl": "https://www.triumph-sports.com/wp-content/uploads/2019/05/D23-2-1.jpg",
+  "price": 59.99,
+  "category": "Tshirt"
+ 
+},
+{
+
+  "name": "Accessory 1",
+  "description": "Stylish accessory for completing your look",
+  "imageUrl": "data:image/jpeg;base64,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",
+  "price": 29.99,
+  "category": "accessories"
+},
+{
+
+  "name": "Sneaker 1",
+  "description": "Comfortable and stylish sneaker",
+  "imageUrl": "data:image/jpeg;base64,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",
+  "price": 99.99,
+  "category": "sneakers"
+ 
+},
+{
+ 
+  "name": "T-Shirt 1",
+  "description": "Casual and cool T-shirt",
+  "imageUrl": "https://example.com/tshirt1.jpg",
+  "price": 19.99,
+  "category": "Tshirt"
+ 
+},
+{
+
+  "name": "Sneaker 1",
+  "description": "Comfortable and stylish sneaker",
+  "imageUrl": "https://example.com/sneaker1.jpg",
+  "price": 99.99,
+  "category": "sneakers"
+ 
+},
+{
+
+  "name": "jean 1",
+  "description": "Comfortable and stylish jean",
+  "imageUrl": "https://img.abercrombie.com/is/image/anf/KIC_155-2290-0793-280_prod1?policy=product-medium&wid=350&hei=438",
+  "price": 99.99,
+  "category": "jeans"
+ 
+}
+
+
+]

@@ -1,5 +1,5 @@
 .nav {
-    background-color: #9b3737;
+    background-color: hwb(0 45% 39%);
     margin: 0px;
     padding: 10px;
     display: flex;
@@ -7,6 +7,12 @@
     align-items: center;
     color: #F3F3F3;
   }
+
+
+
+  
+    
+
   .logo {
     font-size: 26px;
     margin-right: auto;
@@ -229,7 +235,7 @@
   
   button {
     padding: 10px 20px;
-    background-color: #6e0378;
+    background-color: #0a080a;
     color: white;
     border: none;
     border-radius: 5px;
@@ -262,6 +268,7 @@
   .product-image {
     margin-right: 50px;
   }
+  
   
   .product-image img {
     max-width: 100%;
