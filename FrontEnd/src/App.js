@@ -2,6 +2,7 @@ import react ,{useEffect, useState}from "react"
 import axios from "axios"
 import Productlist from "./components/Productlist.js"
 import Productdetails from "./components/Productdetails.js"
+import CartList from "./components/Cartlist.js"
 import Search from "./components/Search.js"
 import Contact from "./components/Contact.js"
 import "./app.css"
@@ -19,6 +20,7 @@ const App=()=>{
   const [sneakers, setSneakers] = useState([]);
   const [shirts, setShirts] = useState([]);
   const [accessories,setAccessories]= useState([])
+  const [cart,setCart] = useState([])
 
 const switchView=(view)=>{
   setView(view)
@@ -62,11 +64,25 @@ useEffect(()=>{
   setAccessories(data.filter((e)=>e.category === "accessories"))
 
 },[trigger])
+const cartStal = (obj) => {
+  setCart([...cart,obj])
+  }
+  
+  const removeStal =(index)=>{
+    var newState = [...cart]
+    newState.splice(index,1)
+    setCart(newState)
+    }
+  
+  const emptyCart = () => {
+    setCart([])
+  }
 return(
   <div className="App">
         <div className="nav">
           <span className="logo" onClick={()=>{switchView ("productList")
-           setTrigger(!trigger)}}>Outlet</span>
+           setTrigger(!trigger)}} >Outlet</span>
+         
           { view ==="productList" &&<Search stal={stalSearch} />}
         { view ==="productList" && <span className="items" onClick={toggleMenu}>
           
@@ -90,10 +106,11 @@ return(
             <span className='menu-item'onClick={()=>setData(shirts)} >Shirts</span>
             <span className='menu-item'onClick={()=>setData(accessories)} >Accessories</span>
           </div>}
-          {view ==="productList" && <Productlist data={data} setView={setView} setOne={setOne} delet={delet} update={update} />}  
+          {view ==="productList" && <Productlist data={data} setView={setView} setOne={setOne} delet={delet} update={update} cartStal={cartStal} />}  
           {view ==="productdetails" && <Productdetails  ones={one}/>}
           {view ==="contact" && <Contact/>}
           {view ==="add" && <Add setView={setView} setTrigger={setTrigger} trigger={trigger}/>}
+          {view === "cart" && <CartList remove={removeStal} cartData = {cart} empty={emptyCart}/>}
     </div>
 
 )
