@@ -3,10 +3,12 @@ import axios from "axios"
 import Productlist from "./components/Productlist.js"
 import Productdetails from "./components/Productdetails.js"
 import Search from "./components/Search.js"
-import Contact from "./components/Contact.js"
+
 import "./app.css"
 import Add from "./components/Add.js"
 import Update from "./components/update.js"
+
+
 
 
 
@@ -91,12 +93,13 @@ return(
           
             CART
           </span>
-          <span className="items" onClick={()=>switchView ("contact")}>
-          CONTACT
-          </span>
+          
+         
           <span className="items" onClick={()=>switchView ("add")}>
           UPDATE
           </span>
+         
+          
         </div>
        {menuView && <div className="menu">
             <span className='menu-item' onClick={()=>setData(sneakers)} >Sneakers</span>
@@ -106,7 +109,8 @@ return(
           </div>}
           {view ==="productList" && <Productlist upd={upd} data={data} setView={setView} setOne={setOne} delet={delet} update={update} />}  
           {view ==="productdetails" && <Productdetails  ones={one}/>}
-          {view ==="contact" && <Contact/>}
+          {view ==="solde" && <Solde/>}
+          
           {view ==="add" && <Add setView={setView} setTrigger={setTrigger} trigger={trigger}/>}
           {view ==="update" && <Update updated={updated} setView={setView} setTrigger={setTrigger} trigger={trigger}/>}
           
