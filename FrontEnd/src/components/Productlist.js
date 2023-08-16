@@ -1,7 +1,7 @@
 import React from "react";
 import Productdetails from "./Productdetails";
 
-const ProductsList = ({data,setOne,setView,delet,update,cartStal}) => {
+const ProductsList = ({data,setOne,setView,delet,update,cartStal }) => {
     return (
         <div>
         <div className='products-list'>
@@ -19,7 +19,7 @@ const ProductsList = ({data,setOne,setView,delet,update,cartStal}) => {
                 <div className="product-card-buttons">
                     <button >Update Product</button>
                     <button onClick={()=>{delet(e._id)}}>Delete Product</button>
-                    <button onClick={()=>cartStal(e)} >Add to Cart</button>
+                    <button onClick={()=>cartStal(e) } >Add to Cart</button>
                 </div>
             </div>
              )

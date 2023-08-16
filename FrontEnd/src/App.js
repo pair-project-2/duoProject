@@ -21,6 +21,8 @@ const App=()=>{
   const [shirts, setShirts] = useState([]);
   const [accessories,setAccessories]= useState([])
   const [cart,setCart] = useState([])
+  
+
 
 const switchView=(view)=>{
   setView(view)
@@ -66,6 +68,7 @@ useEffect(()=>{
 },[trigger])
 const cartStal = (obj) => {
   setCart([...cart,obj])
+  
   }
   
   const removeStal =(index)=>{
@@ -107,10 +110,10 @@ return(
             <span className='menu-item'onClick={()=>setData(accessories)} >Accessories</span>
           </div>}
           {view ==="productList" && <Productlist data={data} setView={setView} setOne={setOne} delet={delet} update={update} cartStal={cartStal} />}  
-          {view ==="productdetails" && <Productdetails  ones={one}/>}
+          {view ==="productdetails" && <Productdetails  ones={one} cartStal={cartStal}  setView={setView}/>}
           {view ==="contact" && <Contact/>}
           {view ==="add" && <Add setView={setView} setTrigger={setTrigger} trigger={trigger}/>}
-          {view === "cart" && <CartList remove={removeStal} cartData = {cart} empty={emptyCart}/>}
+          {view === "cart" && <CartList cart={cart}  />}
     </div>
 
 )

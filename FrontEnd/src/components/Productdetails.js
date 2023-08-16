@@ -1,7 +1,10 @@
 import React from 'react'
 
 
-const Productdetails=({ones})=>{
+const Productdetails=({ones,cartStal}) => {
+  const handleAddToCart = () => {
+    cartStal(ones);
+  }
 return(
     <div className="product-details">
           <div className="product-image">
@@ -11,7 +14,7 @@ return(
             <h1>{ones.name}</h1>
             <p>{ones.description}</p>
             <h2>Price : ${ones.price}</h2>
-            <button>Add to Cart</button>
+            <button onClick={handleAddToCart} >Add to Cart</button>
           </div>
         </div>
 )
